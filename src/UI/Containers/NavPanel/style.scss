@@ -1,0 +1,173 @@
+.button{
+    cursor: pointer;
+    margin-right: 3px;
+    text-decoration:none; 
+    text-align:center; 
+    padding:8px 9px; 
+    border:solid 1px #004F72;
+    border-radius: 10px;
+    font:15px; 
+    font-weight:bold; 
+    color:#000000; 
+    background: #e89806e0;
+    -webkit-box-shadow:4px,4px,6px 2,4,6px 2,2,2px #000000,#000000,#000000;  
+    -moz-box-shadow:4px 2px 2px #000000;  
+    box-shadow:5px 5px 11px -3px #000000, inset 0px 0px 0px;
+    filter: dropshadow(color=#bababa, offx=-11, offy=1);  
+    -webkit-transition: all 0.16s ease-in;
+    max-width: 70%;
+    -moz-transition:  all 0.1s ease-out;
+    -o-transition:  all 0.1s ease-out;
+    transition:  all 0.1s ease-out;
+    &:hover{
+        transform: translate3d(5px, 5px, 0px);
+        box-shadow: 2px 2px 3px #000000;
+        // text-shadow: 9px 1px 6px #bababa;
+        filter: dropshadow(color=#bababa, offx=9, offy=1);
+    }
+    &:active{
+        box-shadow:2px 2px 3px #000000 ,inset 6px 6px 2px #000000;  
+        // text-shadow: -11px 1px 6px #bababa; 
+        filter: dropshadow(color=#bababa, offx=-11, offy=1);
+    }
+    &:first-child{
+        margin-right: 5px;
+    }
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 120px;
+}
+.button_block{
+    display: flex;
+    width: 75%;
+    max-width: 270px;
+    justify-content: space-between;
+}
+.input_block{
+    display: flex;
+    justify-content: space-around;  
+    width:80%;
+    max-width: 400px;
+}
+.field_wrapper{
+    border-radius: 4px;
+    position: relative;
+    width: 27vw;
+    max-width: 170px;
+    overflow: hidden;
+}
+.underline{
+    left: -100%;
+    top:90%;
+    position: absolute;
+    display: block;
+    z-index: 10;
+    width: 100%;
+    height: 1px;
+    // background: #fff;
+    border-bottom: 1px solid red;
+    transition: .3s;
+}
+.arrowRotate{
+    padding-right: 4px;
+    transition: .3s;
+    transform: rotate(180deg);
+}
+.arrowDefault{
+    padding-left: 4px;
+    transform: rotate(0deg);
+    transition: .3s;
+}
+.input{
+    border: 0;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    margin-right: 5px;
+    width: inherit;
+    outline: 0;
+    &:focus{
+        transition: 1s .14s;
+        border-bottom: none;
+        background-color: violet;
+    }
+    &:focus ~ .underline{
+        left: 0%;
+    }
+}
+.inputTitle{
+    pointer-events: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    color: #f9c800;
+    padding-left: 7px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .3s;
+}
+.inputTitleBeforeRemove{
+    animation: anim .3s none ;
+}
+.input_wrapper{
+    position: relative;
+    transition: .3s;
+}
+
+.inputTitleActive{
+    animation: animationFrames linear 1.2s forwards;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes anim{
+      from{
+          transform: translate(2px, -20px);
+      }
+      to{
+          transform: translateY(0px, 0px);
+      }
+  }
+  @keyframes animationFrames{
+    0% {
+      transform:  translate(1px,0px);
+    }
+    5%{
+        transform:  translate(30px,0px) scaleY(.13) ;
+    }
+    25% {
+      transform:  translate(40px,0px) scaleY(0) ;
+    }
+    35% {
+      transform:  translate(5px,-50px) scaleY(0) ;
+    }
+    40% {
+      transform:  translate(5px,-40px) scaleY(0) ;
+    }
+    60%{
+        transform:  translate(5px,-20px)  ;
+        color: #000000;
+    }
+    70%{
+        transform:  translate(5px,-25px)  ;
+        color: #000000;
+    }
+    80%{
+        transform:  translate(5px,-20px) ;
+        color: #000000;
+
+    }
+    100% {
+      transform:  translate(5px,-20px) ;
+      color: #000000;
+    }
+  }
+  
+  @media (max-width:500px){
+    .inputTitle{
+        font-size: 9px;
+    }
+}
