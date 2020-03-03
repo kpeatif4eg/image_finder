@@ -8,6 +8,4 @@
     <li>HOC компоненты</li>
     <li>Hooks</li>
     <li>Eslint и Airbnb config</li>
-    
-<<<<<<< HEAD
 </ul>
