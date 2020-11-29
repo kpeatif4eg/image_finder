@@ -1,5 +1,5 @@
 <h3>image_finder</h3>
-Это небольшой  поисковик картинок использующий API <a href='https://pixabay.com'>pixabay.com</a> 
+Это небольшой 'игрушечный' поисковик картинок использующий API <a href='https://pixabay.com'>pixabay.com</a> 
 <br>
 <h5>Использовались следующие технологии и подходы:</h5>
 <ul>
